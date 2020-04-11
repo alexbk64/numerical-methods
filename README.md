@@ -26,7 +26,7 @@ A collection of MATLAB scripts implementating various numerical methods for deri
 <h3>Risk analysis</h3>
 <h4>Value at Risk of an option</h4>
 <ul>
-  <li><a href=insert_here>Plain Vanilla European call option:</a> </br>
+  <li><a href=https://github.com/alexbk64/numerical-methods/tree/master/risk_analysis/VaR/plain_vanilla_call>Plain Vanilla European call option:</a> </br>
     <i>Note: Option prices are calculated via Black-Scholes model. Run <a href=https://github.com/alexbk64/numerical-methods/blob/master/risk_analysis/VaR/plain_vanilla_call/main.m><code>main.m</code></a> to initialise all variables and compute all of the below. Sets the confidence parameter to 99% by default. </i></br>
     <b>Closed-form solutions:</b>
     <ul>
