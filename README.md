@@ -27,14 +27,14 @@ A collection of MATLAB scripts implementating various numerical methods for deri
 <h4>Value at Risk of an option</h4>
 <ul>
   <li><a href=insert_here>Plain Vanilla European call option:</a> </br>
-    <i>Note: option prices calculated via Black-Scholes model. </i></br>
+    <i>Note: Option prices are calculated via Black-Scholes model. Run <code>main.m</code> to initialise all variables and compute all of the below. Sets the confidence parameter to 99% by default. </i></br>
     <b>Closed-form solutions:</b>
     <ul>
-      <li><a href=insert_here>Exact:</a> uses a closed-form solution to compute the exact VaR of a plain vanilla call option at 99% confidence level for varying time-horizons.
+      <li><a href=insert_here>Exact:</a> uses a closed-form solution to compute the exact VaR of a plain vanilla call option at a given confidence level for varying time-horizons.
       </li>
-      <li><a href=insert_here>Delta approximation:</a> uses a closed-form solution to compute the VaR of a plain vanilla call option at 99% confidence level for varying time-horizons, via delta approximation. Uses a first-order Taylor series approximation, with the inclusion of an additional theta term to capture the effect of time on the value of the option. 
+      <li><a href=insert_here>Delta approximation:</a> uses a closed-form solution to compute the VaR of a plain vanilla call option at a given confidence level for varying time-horizons, via delta approximation. Uses a first-order Taylor series approximation, with the inclusion of an additional theta term to capture the effect of time on the value of the option. 
       </li>
-      <li><a href=insert_here>Delta-gamma approximation:</a> uses a closed-form solution to compute the VaR of a plain vanilla call option at 99% confidence level for varying time-horizons, via delta-gamma approximation. Uses a second-order Taylor series approximation, with the inclusion of an additional theta term to capture the effect of time on the value of the option. 
+      <li><a href=insert_here>Delta-gamma approximation:</a> uses a closed-form solution to compute the VaR of a plain vanilla call option at a given confidence level for varying time-horizons, via delta-gamma approximation. Uses a second-order Taylor series approximation, with the inclusion of an additional theta term to capture the effect of time on the value of the option. 
       </li>
     </ul>
     <b>Monte Carlo estimations:</b>
@@ -45,7 +45,7 @@ A collection of MATLAB scripts implementating various numerical methods for deri
       <li>
         <a href=insert_here>Delta-gamma approximation:</a> uses (crude) Monte Carlo simulations to build the P&L distribution of a plain vanilla call option, via delta-gamma approximation. VaR at a given confidence level is computed by finding the appropriate quantile of the simulated distribution. 
       </li>
-      <li><a href=insert_here>Full revaluation:</a> uses (crude) Monte Carlo simulations to build the P&L distribution of a plain vanilla call option, via full-revaluation. That is, the option is revaluated for each simulated scenario. VaR at a given confidence level is computed by finding the appropriate quantile of the simulated distribution. 
+      <li><a href=insert_here>Full revaluation:</a> uses (crude) Monte Carlo simulations to build the P&L distribution of a plain vanilla call option, via full-revaluation. That is, the option is revaluated via the BS model for each simulated scenario. VaR at a given confidence level is computed by finding the appropriate quantile of the simulated distribution. 
       </li>
     </ul>
   </li>
