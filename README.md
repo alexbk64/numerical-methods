@@ -1,7 +1,8 @@
 # numerical-methods
-A collection of MATLAB scripts implementating various numerical methods for derivative pricing
+A collection of MATLAB scripts implementating various numerical methods for derivative pricing and risk analysis.
 
-<h5> Pricing via crude Monte Carlo Simulations</h5>
+<h3>Pricing derivatives via Monte Carlo Simulations</h3>
+<h4>Crude Monte Carlo:</h4>
 <ul>
   <li><a href=https://github.com/alexbk64/numerical-methods/blob/master/crude_MC/plain_vanilla_options/european_options/plain_vanilla_euro_callANDput.m>Plain Vanilla European call and put options:</a> computes the exact (crude) Monte Carlo price estimate of plain vanilla call and put options based on exact simulation of the geometric Brownian motion assumed for the underlying stock price. True option prices calculated via Black-Scholes model are also computed for comparison.</li>
   <li><a href=https://github.com/alexbk64/numerical-methods/blob/master/crude_MC/exotic_options/asian_options/arith_asian_fixed_strike_callANDput.m>Arithmetic Asian call and put options, with fixed strike:</a> computes the exact (crude) Monte Carlo price estimate of a fixed-strike arithmetic Asian call and put options, with discrete monitoring of the underlying S at times <i>{t1,t2, ..., tn}</i>. We implement exact simulation of the geometric Brownian motion assumed for the underlying stock price. See <a href=crude_MC/exotic_options/asian_options>Asian options</a> for individual call and put pricing scripts, as well as for pricing floating-strike arithmetic Asian options.</li>
@@ -14,7 +15,7 @@ A collection of MATLAB scripts implementating various numerical methods for deri
     </ul>
   call and put options, with discrete monitoring of the underlying S at times <i>{t1,t2, ..., tn}</i>. We implement exact simulation of the geometric Brownian motion assumed for the underlying stock price.</li>
 </ul>
-<h4>Variance reduction techniques</h4>
+<h4>Variance reduction techniques:</h4>
 <h5>Pricing via control variates Monte Carlo Simulations</h5>
 <ul>
   <li><a href=https://github.com/alexbk64/numerical-methods/tree/master/control_variate/asian/arith_asian_call>Arithmetic Asian call option: </a> computes the (control variates) Monte Carlo price estimate of a fixed-strike arithmetic Asian call option, with discrete monitoring of the underlying S at times <i>{t1,t2,...,tn}</i>. Done by exploiting information about the errors in estimates of a <b>known and correlated</b> quantity (the <b>geometric</b> Asian option price) to reduce the error of an estimate of an unknown quantity (the <b>arithmetic</b> Asian option price).</li>
@@ -22,6 +23,34 @@ A collection of MATLAB scripts implementating various numerical methods for deri
 </ul>
 <h5>Pricing via antithetic variates Monte Carlo Simulations</h5>
 
+<h3>Risk analysis</h3>
+<h4>Value at Risk of an option</h4>
+<ul>
+  <li><a href=insert_here>Plain Vanilla European call option:</a> </br>
+    <i>Note: option prices calculated via Black-Scholes model. </i></br>
+    <b>Closed-form solutions:</b>
+    <ul>
+      <li><a href=insert_here>Exact:</a> uses a closed-form solution to compute the exact VaR of a plain vanilla call option at 99% confidence level for varying time-horizons.
+      </li>
+      <li><a href=insert_here>Delta approximation:</a> uses a closed-form solution to compute the VaR of a plain vanilla call option at 99% confidence level for varying time-horizons, via delta approximation. Uses a first-order Taylor series approximation, with the inclusion of an additional theta term to capture the effect of time on the value of the option. 
+      </li>
+      <li><a href=insert_here>Delta-gamma approximation:</a> uses a closed-form solution to compute the VaR of a plain vanilla call option at 99% confidence level for varying time-horizons, via delta-gamma approximation. Uses a second-order Taylor series approximation, with the inclusion of an additional theta term to capture the effect of time on the value of the option. 
+      </li>
+    </ul>
+    <b>Monte Carlo estimations:</b>
+    <ul>
+      <li>
+        <a href=insert_here>Delta approximation:</a> uses (crude) Monte Carlo simulations to build the P&L distribution of a plain vanilla call option, via delta approximation. VaR at a given confidence level is computed by finding the appropriate quantile of the simulated distribution. 
+      </li>
+      <li>
+        <a href=insert_here>Delta-gamma approximation:</a> uses (crude) Monte Carlo simulations to build the P&L distribution of a plain vanilla call option, via delta-gamma approximation. VaR at a given confidence level is computed by finding the appropriate quantile of the simulated distribution. 
+      </li>
+      <li><a href=insert_here>Full revaluation:</a> uses (crude) Monte Carlo simulations to build the P&L distribution of a plain vanilla call option, via full-revaluation. That is, the option is revaluated for each simulated scenario. VaR at a given confidence level is computed by finding the appropriate quantile of the simulated distribution. 
+      </li>
+    </ul>
+  </li>
+  <li> More to come...</li>
+</ul>
 
 <p>
   <i>
