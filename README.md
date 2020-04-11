@@ -22,7 +22,19 @@ A collection of MATLAB scripts implementating various numerical methods for deri
   <li><a href=https://github.com/alexbk64/numerical-methods/tree/master/control_variate/asian/arith_asian_put>Arithmetic Asian put option: </a>approaches the pricing of a fixed-strike arithmetic Asian put option, in the same way as above.</li>
 </ul>
 <h5>Pricing via antithetic variates Monte Carlo Simulations</h5>
+<ul><li>COMING SOON.</li></ul>
 
+<h3>Pricing derivatives via Multinomial Lattices</h3>
+<ul>
+  <li><a href=https://github.com/alexbk64/numerical-methods/blob/master/multinomial_lattices/plain_vanilla.m>Plain Vanilla European call option:</a> computes the exact price estimate of a plain vanilla call option using a multinomial lattice.
+  </li>
+  <li><a href=https://github.com/alexbk64/numerical-methods/blob/master/multinomial_lattices/>Bermudan call option:</a> computes the exact price estimate of a Bermudan call option using a multinomial lattice. COMING SOON.
+  </li>
+</ul>
+
+
+
+<!--------------------------------------------- RISK ANALYSIS --------------------------------------------------------->
 <h3>Risk analysis</h3>
 <h4>Value at Risk of an option</h4>
 <ul>
